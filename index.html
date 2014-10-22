@@ -3,17 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>АвансФинанс - кредитные решения</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="feedback/js/feedback.js"></script>
-	<script src="feedback/js/jquery.arcticmodal.js"></script>
-    <script src="feedback/js/jquery.jgrowl.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function() {
-		$(document).on('click', '.modal_btn', function(){
-			$('#small-modal').arcticmodal();
-		});
-	});
-    </script>
 
 	<link rel="stylesheet" type="text/css" href="feedback/css/jquery.arcticmodal.css">
     <link rel="stylesheet" type="text/css" href="feedback/css/jquery.jgrowl.css">
@@ -164,9 +153,35 @@
             </ul>
         </section><!--end BOX-BENEFITS-->
 
+        <section class="box-call-tel">
+            <header class="big-header-section">
+                <span class="name-section">
+                    <span class="red">143</span> млн. рублей мы <span>сэкономили</span> нашим
+                    <span>клиентам</span>
+                </span>
+
+                <aside>
+                    (43 млн.) <strong>комиссии</strong>
+                    (50 млн.) <strong>штрафы</strong>
+                    (50 млн.) <strong>проценты</strong>
+                </aside>
+            </header>
+        </section><!--end BOX-CALL-TEL-->
+
     </div><!--end WRAP-CONTENT-->
 
     <div class="footer"></div>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/mainJs.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <script src="feedback/js/jquery.arcticmodal.js"></script>
+    <script src="feedback/js/jquery.jgrowl.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).on('click', '.modal_btn', function(){
+                $('#small-modal').arcticmodal();
+            });
+        });
+    </script>
 </body>
 </html>
