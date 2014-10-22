@@ -1,9 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>Index</title>
-    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <meta charset="utf-8">
+    <title>АвансФинанс - кредитные решения</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+	<script src="feedback/js/jquery.arcticmodal.js"></script>
+    <script src="feedback/js/jquery.jgrowl.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$(document).on('click', '.modal_btn', function(){
+			$('#small-modal').arcticmodal();
+		});
+	});
+    </script>
+
+	<link rel="stylesheet" type="text/css" href="feedback/css/jquery.arcticmodal.css">
+    <link rel="stylesheet" type="text/css" href="feedback/css/jquery.jgrowl.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 
 <body>
@@ -13,7 +27,7 @@
                 <a href="#">
                     <img src="images/header/main_logo.png" alt="foto">
                 </a>
-                <span>Аванс, Финанс, кредитніе решения</span>
+                <span>Аванс, Финанс, кредитные решения</span>
             </h1>
 
             <div class="box-contact-info">
@@ -60,11 +74,11 @@
 
                     <div class="box-timer"></div>
 
-                    <form class="call-back" action="#" method="post" name="call-back-form">
-                        <input class="btn-your-name" name="your-name" type="text" value="Ваше имя">
-                        <input class="btn-your-tel" name="your-tel" type="text" value="Ваш телефон">
-                        <input class="btn-yellow btn-submit-form_js" type="button" value="Получить деньги">
-                    </form>
+                 <form  class="call-back" action="" method="get" name="call-back">
+                    <input class="btn-your-name" name="name" type="text" value="Ваше имя">
+                        <input class="btn-your-tel" name="tell" type="text" value="Ваш телефон">
+                        <input class="feedback btn-yellow" name="send" type="button" value="Получить деньги">
+                </form>
                 </div><!--end BOX-CALL-BACK-->
             </div><!--end WRAP-CALL-BACK-->
         </div><!--end BANNER-CALL-BACK-->
@@ -74,7 +88,5 @@
 
     <div class="footer"></div>
 
-    <script src="js/jQuery 1.11.0.js"></script>
-    <script src="js/mainJs.js"></script>
 </body>
 </html>

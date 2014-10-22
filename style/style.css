@@ -127,7 +127,6 @@ a:hover                        { text-decoration:none; }
         }
             .box-contact-info .street a {
                 color: #688AAF;
-                font-size: 13px;
                 text-decoration: none;
                 border-bottom: 1px dotted #688AAF;
                 font: 16px "pfhighWaySansPro-thin";
@@ -249,6 +248,7 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
     .banner-call-back {
-        background-size: 100% 100%;
+        background-size: cover;
+        background-position: 0 0;
     }
 }
