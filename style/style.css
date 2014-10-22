@@ -36,18 +36,117 @@ a:hover                        { text-decoration:none; }
 .align-c                       { text-align:center !important; }
 .clear                         { clear:both; }
 .clearfix:after                { content: ""; display: block; clear: both; visibility: hidden;}
-.clearfix                      { display: inline-block; }
+.clearfix                      { display: inline-block; width: 100% }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FONTS----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@font-face {
+    font-family: "pfagoraSansPro-regular";
+    src: url("../fonts/ufonts.com_pfagorasanspro-regular.eot");
+    src: url("../fonts/ufonts.com_pfagorasanspro-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ufonts.com_pfagorasanspro-regular.woff") format("woff"), url("../fonts/ufonts.com_pfagorasanspro-regular.ttf") format("truetype"), url("../fonts/ufonts.com_pfagorasanspro-regular.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "pfhighWaySansPro-regular";
+    src: url("../fonts/ufonts.com_pfhighwaysanspro-regular.eot");
+    src: url("../fonts/ufonts.com_pfhighwaysanspro-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ufonts.com_pfhighwaysanspro-regular.woff") format("woff"), url("../fonts/ufonts.com_pfhighwaysanspro-regular.ttf") format("truetype"), url("../fonts/ufonts.com_pfhighwaysanspro-regular.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "pfhighWaySansPro-thin";
+    src: url("../fonts/ufonts.com_pfhighwaysanspro-thin.eot");
+    src: url("../fonts/ufonts.com_pfhighwaysanspro-thin.eot?#iefix") format("embedded-opentype"), url("../fonts/ufonts.com_pfhighwaysanspro-thin.woff") format("woff"), url("../fonts/ufonts.com_pfhighwaysanspro-thin.ttf") format("truetype"), url("../fonts/ufonts.com_pfhighwaysanspro-thin.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
+.wrap-header {
+    padding-top: 25px;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------HEADER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
-/*----------------------------------------------------------------------------------*/
+.header {
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto 25px;
+}
+    .main-logo {
+        overflow: hidden;
+        float: left;
+        width: 208px;
+        height: 56px;
+    }
+        .main-logo a {
+            display: block;
+        }
+            .main-logo img {
+                display: block;
+                width: 208px;
+                height: 56px;
+            }
+    .box-contact-info {
+        position: relative;
+        float: right;
+        padding: 0 0 1px 23px;
+    }
+        .box-contact-info:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 15px;
+            height: 20px;
+            background: url("../images/header/icon_tel.png") no-repeat;
+        }
+        .number-tel-header {
+            display: block;
+            margin-left: 10px;
+            font: 28px "pfhighWaySansPro-thin";
+            color: #1a1a1a;
+        }
+            .number-tel-header span {
+                color: #4d4d4d;
+            }
+        .box-contact-info .street {
+            display: block;
+            font: 16px "pfhighWaySansPro-thin";
+            color: #1a1a1a;
+        }
+            .box-contact-info .street a {
+                color: #688AAF;
+                font-size: 13px;
+                text-decoration: none;
+                border-bottom: 1px dotted #688AAF;
+                font: 16px "pfhighWaySansPro-thin";
+            }
+            .box-contact-info .street a:hover {
+                border: none;
+            }
 /*-------------------------------------NAV------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
+.wrap-nav {
+    background: #364657;
+}
+    .nav {
+        overflow: hidden;
+        width: 1000px;
+        margin: 0 auto;
+    }
+        .nav li {
+            float: left;
+        }
+         .nav a {
+             display: block;
+             padding: 18px 20px 19px;
+             font: 18px "pfhighWaySansPro-regular";
+             text-decoration: none;
+             color: #fff;
+         }
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
