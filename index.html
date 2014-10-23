@@ -137,7 +137,76 @@
                 <h1>Почему стоит обращаться к нам</h1>
             </header>
 
-            <div class="slider-box"></div>
+
+            <div id="sliderContainer">
+                <div id="myController">
+                    <span class="jFlowControl">Комиссии</span>
+                    <span class="jFlowControl">Штрафы</span>
+                    <span class="jFlowControl">Проценты</span>
+                </div>
+
+                <div id="mySlides">
+                    <div id="slide1" class="slide">
+                        <img src="images/content/slide_foto1.jpg" alt="Slide 1 jFlow Plus" />
+
+                        <div class="slideContent">
+                            <div class="box-text">
+                                <header>Берем всю головную боль на себя!</header>
+
+                                <span>Подготовка и збор документов</span>
+                                <span>Правильна подача заявок на кредит</span>
+                                <span>Походу по 40 банкам</span>
+                                <span>Подбор лучшей из 187 кредитных программ</span>
+
+                                <a href="#" class="btn-yellow">Подробнее</a>
+                            </div>
+
+                            <div class="overview"></div>
+                        </div>
+                    </div>
+
+                    <div id="slide2" class="slide">
+                        <img src="images/content/slide_foto2.jpg" alt="Slide 2 jFlow Plus" />
+
+                        <div class="slideContent">
+                            <div class="box-text">
+                                <header>Штрафы, комиссии</header>
+
+                                <span>Обойдем все подводные камни</span>
+                                <span>Подберем лучшие условия для Вас из 127 кредитных программ</span>
+
+                                <a href="#" class="btn-yellow">Подробнее</a>
+                            </div>
+
+                            <div class="overview"></div>
+                        </div>
+                    </div>
+
+                    <div id="slide3" class="slide">
+                        <img src="images/content/slide_foto3.jpg" alt="Slide 3 jFlow Plus" />
+
+                        <div class="slideContent">
+                            <div class="box-text">
+                                <header>Решим Ваши любые проблемы</header>
+
+                                <span>Неофициальная зарплата</span>
+                                <span>Плохая кредитная история</span>
+                                <span>Отсутствие необходимых документов</span>
+
+                                <a href="#" class="btn-yellow">Подробнее</a>
+                            </div>
+
+                            <div class="overview"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="jFlowPrev"></div>
+
+                <div class="jFlowNext"></div>
+
+            </div>
+            <!--end: sliderContainer -->
         </section><!--end BOX-BENEFITS-->
 
         <section class="box-calculate content">
@@ -148,7 +217,30 @@
             </header>
 
             <ul class="list-polzunok">
-                <li></li>
+                <li>
+                    <span class="name-polzunok">Ставка</span>
+                    <button id="btn-minus1" class="btn-minus">&#8212;</button>
+                    <div id="sl"></div>
+                    <button id="btn-plus1" class="btn-plus">+</button>
+                    <input type="text" id="info1" class="txtfield" value="0">
+                </li>
+
+                <li>
+                    <span class="name-polzunok">Ставка</span>
+                    <button id="btn-minus2" class="btn-minus">&#8212;</button>
+                    <div id="sl2"></div>
+                    <button id="btn-plus2" class="btn-plus">+</button>
+                    <input type="text" size="3" id="info2" class="txtfield" value="0">
+                </li>
+
+                <li>
+                    <span class="name-polzunok">Ставка</span>
+                    <button id="btn-minus3" class="btn-minus">&#8212;</button>
+                    <div id="sl3"></div>
+                    <button id="btn-plus3" class="btn-plus">+</button>
+                    <input type="text" size="3" id="info3" class="txtfield" value="0">
+                    <span class="txtfield no-margin">месяцев</span>
+                </li>
             </ul>
 
             <ul class="list-result-calculate">
@@ -518,6 +610,26 @@
         $(document).ready(function() {
             $(document).on('click', '.modal_btn', function(){
                 $('#small-modal').arcticmodal();
+            });
+        });
+    </script>
+
+    <script src="js/jflow.plus.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#myController").jFlow({
+                controller: ".jFlowControl", // must be class, use . sign
+                slideWrapper : "#jFlowSlider", // must be id, use # sign
+                slides: "#mySlides",  // the div where all your sliding divs are nested in
+                selectedWrapper: "jFlowSelected",  // just pure text, no sign
+                effect: "flow", //this is the slide effect (rewind or flow)
+                width: "1000px",  // this is the width for the content-slider
+                height: "470px",  // this is the height for the content-slider
+                duration: 400,  // time in milliseconds to transition one slide
+                pause: 1000, //time between transitions
+                prev: ".jFlowPrev", // must be class, use . sign
+                next: ".jFlowNext", // must be class, use . sign
+                auto: true
             });
         });
     </script>

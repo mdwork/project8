@@ -339,7 +339,7 @@ a:hover                        { text-decoration:none; }
 
 /*----BOX-STEPS----*/
     .box-steps {
-
+        margin-bottom: 30px;
     }
         .header-section {
             margin-bottom: 15px;
@@ -421,6 +421,9 @@ a:hover                        { text-decoration:none; }
             font: 18px "pfhighWaySansPro-thin";
         }
 /*---BOX-BENEFITS---*/
+.box-benefits {
+    margin-bottom: 40px;
+}
 /*---BOX-CALCULATE---*/
 .box-calculate {
     margin-bottom: 65px;
@@ -431,6 +434,56 @@ a:hover                        { text-decoration:none; }
     .list-polzunok {
 
     }
+        .list-polzunok li {
+            margin-bottom: 30px;
+            padding: 10px 5px 10px 40px;
+            background: #FFDD2D;
+            border-bottom: 1px solid #E2B925;
+        }
+            .list-polzunok li > div {
+                display: inline-block;
+                margin-left: 30px;
+            }
+                .list-polzunok .name-polzunok {
+                    font: 24px "pfhighWaySansPro-thin";
+                }
+                .btn-minus,
+                .btn-plus {
+                    width: 34px;
+                    padding: 8px 0 9px;
+                    text-align: center;
+                    border: 1px solid #000;
+                    background: none;
+                    cursor: pointer;
+                    margin-left: 30px;
+
+                    -webkit-border-radius: 20px;
+                    -moz-border-radius: 20px;
+                    border-radius: 20px;
+                }
+                .knob {
+                    position: relative;
+                    top: -10px;
+                    background-image: url(../images/content/icon_polzunok.png);
+                    cursor: pointer;
+                }
+                .slider {
+                    background: #364657;
+
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                }
+                .txtfield {
+                    margin-left: 40px;
+                    font: 18px "pfhighWaySansPro-thin";
+                    border: none;
+                    background: transparent;
+                }
+                #info1 {
+                    width: 85px;
+                }
+
     .list-result-calculate {
         overflow: hidden;
         margin-bottom: 20px;
@@ -859,5 +912,184 @@ a:hover                        { text-decoration:none; }
     }
 }
 /*----------------------------------------------------------------------------------*/
-/*-------------------------------------TIMER----------------------------------------*/
+/*-------------------------------------SLIDER----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+#container {
+    width: 800px;
+    height: 350px;
+    position: relative;
+    border-top: 5px solid #999;
+    border-bottom: 5px solid #999;
+    margin: 0 auto;
+}
+
+.jFlowSlideContainer a {
+    color: #F90;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.jFlowSlideContainer a:hover {
+    text-decoration: none;
+    border-bottom: 1px dotted white;
+}
+
+.jFlowSlideContainer a:focus {
+    position: relative;
+    top: 1px;
+}
+
+.jFlowNext {
+    background: url("../images/content/slider_btn_next.jpg") 12px 11px no-repeat #FFDD2D;
+    height:62px;
+    position:absolute;
+    bottom:209px;
+    right: 45px;
+    width:38px;
+    cursor:pointer;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.jFlowPrev  {
+    background: url("../images/content/slider_btn_prev.jpg") 12px 11px no-repeat #FFDD2D;
+    height:62px;
+    position:absolute;
+    bottom:209px;
+    left: 45px;
+    width:38px;
+    cursor:pointer;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#mySlides img {
+    display: block;
+    width: 1000px;
+    height: 470px;
+}
+.slideContent {
+    position: absolute;
+    top: 145px;
+    left: 245px;
+    padding: 25px 35px 20px;
+    width: 465px;
+}
+#jFlowCredits {
+    text-align: center;
+    margin: 0 auto;
+    width: 800px;
+}
+
+#jFlowCredits h1 {
+    color: #666;
+    font-weight: normal;
+    font-size: 90px;
+    line-height: 1.1em;
+    text-shadow: 1px 1px 1px #FFF;
+    margin: 20px 0 0 0;
+}
+
+
+#jFlowCredits h1 span {
+    font-style: italic;
+    background-color: #CCC;
+    font-size: 40px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #999;
+
+}
+
+#jFlowCredits h2 {
+    margin: 0 0 30px 0;
+}
+
+#jFlowCredits h2 a {
+    color: #FFF;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #999;
+
+}
+
+#jFlowCredits h2 a:hover {
+    text-decoration: underline;
+    background-color: #CCC;
+    color: #FFF;
+}
+#myController {
+    text-align: center;
+    margin-bottom: 15px;
+}
+#myController span {
+    display: inline-block;
+    width: 145px;
+    padding: 6px 0;
+    margin: 0 14px;
+    border: 2px solid #000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font: 20px "PragmaticaLight";
+}
+#myController .jFlowSelected {
+    border-color: #FFDD2D;
+    background: #FFDD2D;
+}
+.slideContent .overview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.8;
+}
+.slideContent .box-text {
+    position: relative;
+    z-index: 10;
+}
+.box-text header {
+    text-transform: uppercase;
+    font: 30px "pfhighWaySansPro-thin";
+    margin-bottom: 10px;
+}
+.box-text {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.box-text span {
+    display: block;
+    font: 18px "PragmaticaLight";
+    line-height: 1.5;
+}
+.box-text span:before {
+    content: '-';
+    display: inline-block;
+}
+.box-text .btn-yellow {
+    display: inline-block;
+    width: 150px;
+    padding: 10px 0;
+    margin-top: 15px;
+    background: #FFDD2D;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font: 18px "pfhighWaySansPro-thin";
+    transition: 0.3s;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.box-text .btn-yellow:hover {
+    background: #FFB52D;
+    border: none;
+}
