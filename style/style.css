@@ -249,6 +249,34 @@ a:hover                        { text-decoration:none; }
                     font-size: 24px;
                     text-transform: uppercase;
                 }
+
+            .box-timer {
+                overflow: hidden;
+                margin: 15px 0 18px;
+                text-align: center;
+            }
+                .wrap-block-timer {
+                    display: inline-block;
+                    width: 54px;
+                    padding: 4px 0 5px;
+                    margin: 0 3px;
+                    border: 1px solid #000;
+
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    border-radius: 3px;
+                }
+                    .wrap-block-timer span {
+                        display: block;
+                        text-align: center;
+                        font: 24px "pfhighWaySansPro-thin";;
+                    }
+                    .wrap-block-timer .dd,
+                    .wrap-block-timer .hh,
+                    .wrap-block-timer .mm,
+                    .wrap-block-timer .ss {
+                        font-size: 12px;
+                    }
         .call-back {
             padding: 25px 18px;
             background: #364657;
@@ -830,3 +858,6 @@ a:hover                        { text-decoration:none; }
         background-position: 0 0;
     }
 }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------TIMER----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
