@@ -475,6 +475,8 @@ a:hover                        { text-decoration:none; }
                     border-radius: 5px;
                 }
                 .txtfield {
+                    position: relative;
+                    top: 1px;
                     margin-left: 40px;
                     font: 18px "pfhighWaySansPro-thin";
                     border: none;
@@ -483,6 +485,13 @@ a:hover                        { text-decoration:none; }
                 #info1 {
                     width: 85px;
                 }
+                #info3 {
+                    width: 23px;
+                }
+    #summit-up {
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
 
     .list-result-calculate {
         overflow: hidden;
