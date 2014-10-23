@@ -2,7 +2,7 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:12px Tahoma, sans-serif; background:#fff; color:#000; }
+body                            { padding:0; margin:0; font:12px arial, sans-serif; background:#fff; color:#000; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
 	padding:0;
 	margin:0;
@@ -15,7 +15,7 @@ textarea                       { vertical-align:top; }
 input[type=submit]             { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font:12px Tahoma, sans-serif; color:#000; text-decoration:underline; }
+a:link, a:visited              { font:12px Arial, sans-serif; color:#000; text-decoration:underline; }
 a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
@@ -80,7 +80,8 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 .header,
 .nav,
-.content {
+.content,
+.box-call-back-tell {
     overflow: hidden;
     width: 1000px;
     margin: 0 auto;
@@ -173,7 +174,7 @@ a:hover                        { text-decoration:none; }
         .nav a {
             display: block;
             padding: 18px 20px 19px;
-            font: 18px "pfhighWaySansPro-regular";
+            font: 18px "pfhighWaySansPro-regular", arial;
             text-decoration: none;
             color: #fff;
         }
@@ -278,7 +279,7 @@ a:hover                        { text-decoration:none; }
                 background-image: url("../images/content/icon_tel.png");
                 background-position: 17px 5px;
             }
-            .btn-yellow {
+            .call-back .btn-yellow {
                 width: 250px;
                 padding: 11px 0px 12px;
                 background: #FFDD2D;
@@ -289,9 +290,6 @@ a:hover                        { text-decoration:none; }
                 -webkit-border-radius: 3px;
                 -moz-border-radius: 3px;
                 border-radius: 3px;
-            }
-            .btn-yellow:hover {
-                background: #FFB52D;
             }
             /*custom placeholder*/
             .btn-your-name::-webkit-input-placeholder,
@@ -483,6 +481,337 @@ a:hover                        { text-decoration:none; }
             text-align: center;
             text-transform: uppercase;
             font: 30px "pfhighWaySansPro-thin";
+        }
+    .box-call-back-tell {
+        padding: 40px 0 20px;
+        border: 2px solid #C0C0C0;
+        font-family: "pfhighWaySansPro-regular";
+    }
+        .box-call-back-tell .weight-header {
+            display: block;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .box-call-back-tell .text-grey {
+            display: block;
+            font-size: 30px;
+            color: #252525;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .box-enter-tel {
+            float: left;
+            width: 528px;
+            margin: 28px 8px 45px 145px;
+            padding: 10px 0;
+            border: 1px solid #CAE0F2;
+            background: #fff;
+            text-align: center;
+            font: 38px "PragmaticaLight";
+
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+            .box-enter-tel input {
+                font: 38px "PragmaticaLight";
+                border: none;
+                border-bottom: 1px solid #000;
+                text-align: center;
+            }
+            .box-enter-tel .three-number {
+                width: 65px;
+            }
+            .box-enter-tel .two-number {
+                width: 45px;
+            }
+        .box-call-back-tell .btn-yellow {
+            width: 210px;
+            margin-top: 28px;
+            padding: 21px 0;
+            background: #FFDD2D;
+            border: none;
+            border-bottom: 1px solid #D4A821;
+            font: 21px "pfhighWaySansPro-thin";
+            cursor: pointer;
+            transition: 0.2s;
+
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+        .box-call-back-tell .btn-yellow:hover {
+            background: #FFB52D;
+        }
+        .box-call-back-tell .red-text {
+            display: block;
+            text-align: center;
+            font: 36px "pfhighWaySansPro-thin";
+            color: #e11106;
+        }
+/*---box-statistics-credit---*/
+.box-statistics-credit {
+    padding: 75px 0 45px;
+    margin-bottom: 60px;
+    background: #364657;
+}
+.box-statistics-credit .content {
+    width: 930px;
+    padding-left: 70px;
+}
+    .box-statistics-credit .number-credit {
+        position: relative;
+        float: left;
+        padding: 6px 8px;
+        margin: 0 70px 25px 0;
+        border: 2px solid #C0C0C0;
+        border-right: none;
+        font: 72px "pfhighWaySansPro-regular";
+        color: #ffdd2d;
+
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+        .box-statistics-credit .number-credit:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -23px;
+            top: -3px;
+            width: 23px;
+            height: 103px;
+            background: url("../images/content/triagle_fon.png") right no-repeat;
+        }
+    .wra-text-credit {
+        display: table-cell;
+        height: 102px;
+        vertical-align: middle;
+        font: 30px "PragmaticaLight";
+        text-transform: uppercase;
+        color: #fff;
+    }
+        .wra-text-credit span {
+            display: block;
+        }
+        .wra-text-credit .text-yellow {
+            color: #ffdd2d;
+        }
+    .statistic-text {
+        float: left;
+        margin-right: 55px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+        .statistic-text .number {
+            float: left;
+            margin-right: 40px;
+            font: 72px "pfhighWaySansPro-regular";
+        }
+        .statistic-text .text {
+            display: table-cell;
+            height: 86px;
+            vertical-align: middle;
+            font: 30px "PragmaticaLight";
+        }
+/*---end BOX-REVIEWS-MEDIA---*/
+.list-reviews-media {
+    overflow: hidden;
+    margin-bottom: 85px;
+}
+    .list-reviews-media li {
+        float: left;
+        width: 315px;
+        margin-left: 25px;
+        color: #676767;
+        font: 14px "PragmaticaLight";
+    }
+    .list-reviews-media li:first-child {
+        margin-left: 0;
+    }
+        .list-reviews-media header {
+            display: table-cell;
+            width: 315px;
+            height: 70px;
+            vertical-align: bottom;
+            text-align: center;
+        }
+        .list-reviews-media p {
+            margin-top: 20px;
+            line-height: 1.7;
+        }
+
+/*---partners---*/
+.box-partners {
+    margin-bottom: 40px;
+}
+.list-partner {
+    position: relative;
+    height: 270px;
+    margin: 85px 0;
+}
+    .list-partner li {
+        position: absolute;
+    }
+        .list-partner img {
+            display: block;
+        }
+    .list-partner .one {
+        top: 8px;
+        left: 0;
+    }
+    .list-partner .two {
+        top: 0;
+        left: 300px;
+    }
+    .list-partner .three {
+        top: 0;
+        left: 550px;
+    }
+    .list-partner .four {
+        top: 10px;
+        left: 770px;
+    }
+    .list-partner .five {
+        top: 107px;
+        left: 0;
+    }
+    .list-partner .six {
+        top: 110px;
+        left: 245px;
+    }
+    .list-partner .seven {
+        top: 105px;
+        left: 475px;
+    }
+    .list-partner .eight {
+        top: 112px;
+        left: 740px;
+    }
+    .list-partner .nine {
+        top: 215px;
+        left: 0;
+    }
+    .list-partner .ten {
+        top: 214px;
+        left: 305px;
+    }
+    .list-partner .eleven {
+        top: 203px;
+        left: 560px;
+    }
+    .list-partner .twelve {
+        top: 215px;
+        left: 770px;
+    }
+.box-partners .btn-yellow {
+    display: block;
+    width: 395px;
+    padding: 17px 30px 17px 67px;
+    margin: 0 auto 20px;
+    text-align: center;
+    cursor: pointer;
+    background: url("../images/content/icon_pencil.png") 24px 19px no-repeat #FFDD2D;
+    border: none;
+    border-bottom: 1px solid #D4A821;
+    font: 21px "pfhighWaySansPro-thin";
+    transition: 0.2s;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.btn-yellow:hover {
+    background-color: #FFB52D;
+}
+/*---box-review-user---*/
+.list-review-user {
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+    .list-review-user li {
+        float: left;
+        width: 310px;
+        margin-left: 33px;
+        font: 14px "PragmaticaLight";
+    }
+    .list-review-user li:first-child {
+        margin-left: 0;
+    }
+        .list-review-user header {
+            margin-bottom: 45px;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+            .list-review-user .name {
+                font-weight: bold;
+            }
+        .list-review-user .wrap-text {
+            position: relative;
+            padding: 20px;
+            background: #EAF1F7;
+            color: #4d4d4d;
+            line-height: 1.55;
+
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+            .list-review-user .wrap-text:before,
+            .list-review-user li:last-child .wrap-text:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: -20px;
+                width: 34px;
+                height: 20px;
+                margin-left: -17px;
+                background: url("../images/content/triagle_review.jpg") no-repeat;
+            }
+            .list-review-user li:last-child .wrap-text:before {
+                background: url("../images/content/triagle_review2.jpg") no-repeat;
+            }
+
+.map {
+    display: block;
+    width: 100%;
+    height: 421px;
+    margin: 37px 0 45px;
+}
+
+.list-faq {
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+    .list-faq li {
+        cursor: pointer;
+    }
+        .list-faq header {
+            padding: 9px 0 10px 35px;
+            font: 20px "PragmaticaLight";
+            background: url("../images/content/triagle_icon_disable.png") 13px 16px no-repeat;
+        }
+        .list-faq p {
+            display: none;
+            padding: 5px 20px 5px 35px;
+            background: #EAF1F7;
+            font: 14px "PragmaticaLight";
+            line-height: 1.6;
+        }
+        .list-faq .active header {
+            color: #fff;
+            background: url("../images/content/triagle_icon_active.png") 13px 16px no-repeat #3C4955;
+        }
+        .list-faq .active .show-block {
+            display: block;
         }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
