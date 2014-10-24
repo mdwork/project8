@@ -498,11 +498,13 @@ a:hover                        { text-decoration:none; }
                     }
                 .txtfield {
                     position: relative;
-                    top: 1px;
                     margin-left: 40px;
                     font: 18px "pfhighWaySansPro-thin";
                     border: none;
                     background: transparent;
+                }
+                span.txtfield {
+                    top: 2px;
                 }
                 #info1 {
                     width: 105px;
