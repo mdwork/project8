@@ -61,7 +61,7 @@ $(document).ready(function(){
 
     /*set timer*/
     function getfrominputs_914(){
-        string_914 = "10/25/2014 12:00"; /*munth, day, year*/
+        string_914 = "12/25/2014 00:00"; /*month, day, year*/
         get_timer_914(string_914);
         setInterval(function(){
             get_timer_914(string_914);
@@ -72,8 +72,8 @@ $(document).ready(function(){
     /*ползунок*/
     function slider(elemId, sliderWidth, range1, range2, step, postValue, valute) {
         var knobWidth = 32;				// ширина и высота бегунка
-        var knobHeight = 32;			// изменяются в зависимости от используемых изображений
-        var sliderHeight = 9;			// высота slider'а
+        var knobHeight = 56;			// изменяются в зависимости от используемых изображений
+        var sliderHeight = 56;			// высота slider'а
 
         var offsX,tmp;					// вспомагательные переменные
         var d = document;
@@ -182,7 +182,77 @@ $(document).ready(function(){
         this.getValue = getValue;
     } // конец класса
 
-    slider('sl', 540, 0, 1000000, 0, 'info1', ' $');
-    slider('sl2', 540, 0, 20, 1, 'info2', " %");
-    slider('sl3', 540, 1, 36, 1, 'info3', "");
+
+    /*set current date*/
+    var objectDate = new Date;
+    var monthNames = ['январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь'];
+    var getMonthName = monthNames[objectDate.getMonth()];
+    var getDayNumber = objectDate.getDate();
+
+    $('.first-date').text(getDayNumber + ' ' + getMonthName);
+
+    slider('sl', 540, 1, 3000000, 0, 'info1', ' $');
+    slider('sl2', 540, 10, 30, 1, 'info2', " %");
+    slider('sl3', 540, 6, 84, 1, 'info3', "");
+
+    /*credit's calculator*/
+    var firstPolzunok = $('#sl_knob');
+    var secondPolzunok = $('#sl2_knob');
+    var thirdPolzunok = $('#sl3_knob');
+
+    /*set planned date*/
+    function setPlannedDate() {
+        var plusMonth = objectDate.getMonth() + parseInt($('#info3').val());
+
+        function checkCurrentMonth() {
+            if (plusMonth >= 12) {
+                plusMonth = plusMonth - 12;
+                return checkCurrentMonth();
+            }
+        }
+        checkCurrentMonth();
+
+        var getPlannedDayNumber = objectDate.getDate() + 7;
+        var getPlannedMonthName = monthNames[plusMonth];
+
+        if(plusMonth == 10 || plusMonth == 3 || plusMonth == 5 || plusMonth == 8) {
+            if(getPlannedDayNumber == 31) {
+                getPlannedDayNumber = 30;
+            }
+        }
+        if(plusMonth == 1) {
+            if(getPlannedDayNumber == 31 || getPlannedDayNumber == 30 || getPlannedDayNumber == 29) {
+                getPlannedDayNumber = 28;
+            }
+        }
+
+        $('.last-date').text(getPlannedDayNumber + ' ' + getPlannedMonthName);
+    }
+    setPlannedDate();
+
+    function polzunok(curPolzunok){
+        curPolzunok.mousedown(function () {
+            $(this).bind('mousemove', function () {
+                var d = parseInt($('#info1').val(), 10); //кредит
+                var i = parseInt($('#info2').val(), 10) / 100; //процентная ставка
+                var n = parseInt($('#info3').val(), 10) / 12; //количество год
+                var m = 12;
+                var pow = Math.pow((1 + i / m), n * m);
+                var resultPayment = (d * i / m) / (1 - 1 / pow); //формула кредита
+
+                var changeCredit = resultPayment * n * 12;
+                var percentChange = (changeCredit - d) / d * 100;
+
+                $('.cnt-payment').text(resultPayment.toFixed(2) + '$');
+                $('.cnt-percent').text(percentChange.toFixed(2));
+
+                setPlannedDate();
+            });
+        }).mouseup(function () {
+            $(this).unbind('mousemove');
+        });
+    }
+    polzunok(firstPolzunok);
+    polzunok(secondPolzunok);
+    polzunok(thirdPolzunok);
 });
