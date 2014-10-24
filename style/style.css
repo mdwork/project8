@@ -75,6 +75,13 @@ a:hover                        { text-decoration:none; }
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "rubl";
+    src: url("../fonts/rouble.eot");
+    src: url("../fonts/rouble.eot?#iefix") format("embedded-opentype"), url("../fonts/rouble.woff") format("woff"), url("../fonts/rouble.ttf") format("truetype"), url("../fonts/rouble.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------MIXING----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -498,10 +505,15 @@ a:hover                        { text-decoration:none; }
                     background: transparent;
                 }
                 #info1 {
-                    width: 90px;
+                    width: 105px;
+                    font-family: "rubl";
+                }
+                #info2 {
+                    font-family: "rubl";
                 }
                 #info3 {
                     width: 23px;
+                    font-family: "rubl";
                 }
     #summit-up {
         cursor: pointer;
@@ -533,6 +545,9 @@ a:hover                        { text-decoration:none; }
             .currency {
                 position: relative;
                 font: 30px "PragmaticaLight";
+            }
+            .cnt-payment1 {
+                font: 28px "rubl";
             }
                 .cnt-percent:after {
                     content: '%';

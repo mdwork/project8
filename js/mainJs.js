@@ -191,7 +191,7 @@ $(document).ready(function(){
 
     $('.first-date').text(getDayNumber + ' ' + getMonthName);
 
-    slider('sl', 540, 1, 3000000, 0, 'info1', ' $');
+    slider('sl', 540, 1, 3000000, 0, 'info1', ' n');
     slider('sl2', 540, 10, 30, 1, 'info2', " %");
     slider('sl3', 540, 6, 84, 1, 'info3', "");
 
@@ -243,7 +243,7 @@ $(document).ready(function(){
                 var changeCredit = resultPayment * n * 12;
                 var percentChange = (changeCredit - d) / d * 100;
 
-                $('.cnt-payment').text(resultPayment.toFixed(2) + '$');
+                $('.cnt-payment').text(resultPayment.toFixed(2));
                 $('.cnt-percent').text(percentChange.toFixed(2));
 
                 setPlannedDate();
