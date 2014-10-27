@@ -191,7 +191,7 @@ $(document).ready(function(){
 
     $('.first-date').text(getDayNumber + ' ' + getMonthName);
 
-    slider('sl', 540, 1, 3000000, 0, 'info1', ' n');
+    slider('sl', 540, 1, 3000000, 0, 'info1', 'i');
     slider('sl2', 540, 10, 30, 1, 'info2', " %");
     slider('sl3', 540, 6, 84, 1, 'info3', "");
 
@@ -212,7 +212,7 @@ $(document).ready(function(){
         }
         checkCurrentMonth();
 
-        var getPlannedDayNumber = objectDate.getDate() + 7;
+        var getPlannedDayNumber = objectDate.getDate();
         var getPlannedMonthName = monthNames[plusMonth];
 
         if(plusMonth == 10 || plusMonth == 3 || plusMonth == 5 || plusMonth == 8) {
@@ -231,8 +231,8 @@ $(document).ready(function(){
     setPlannedDate();
 
     function polzunok(curPolzunok){
-        curPolzunok.mousedown(function () {
-            $(this).bind('mousemove', function () {
+        curPolzunok.on('mousedown touchstart', function () {
+            $(this).on('mousemove touchmove', function () {
                 var d = parseInt($('#info1').val(), 10); //кредит
                 var i = parseInt($('#info2').val(), 10) / 100; //процентная ставка
                 var n = parseInt($('#info3').val(), 10) / 12; //количество год
@@ -248,8 +248,8 @@ $(document).ready(function(){
 
                 setPlannedDate();
             });
-        }).mouseup(function () {
-            $(this).unbind('mousemove');
+        }).on('mouseup touchend', function () {
+            $(this).off('mousemove touchend');
         });
     }
     polzunok(firstPolzunok);

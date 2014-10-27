@@ -498,6 +498,7 @@ a:hover                        { text-decoration:none; }
                     }
                 .txtfield {
                     position: relative;
+                    height: 30px;
                     margin-left: 40px;
                     font: 18px "pfhighWaySansPro-thin";
                     border: none;
@@ -549,7 +550,7 @@ a:hover                        { text-decoration:none; }
                 font: 30px "PragmaticaLight";
             }
             .cnt-payment1 {
-                font: 28px "rubl";
+                font: 30px "rubl";
             }
                 .cnt-percent:after {
                     content: '%';
