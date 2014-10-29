@@ -365,58 +365,61 @@ a:hover                        { text-decoration:none; }
                 color: #575656;
                 font: 20px "pfhighWaySansPro-thin";
             }
-        .list-steps {
-            position: relative;
-            padding-bottom: 40px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #D6D6D6;
-            background: url("../images/content/icon_triagle.png") 497px 127px no-repeat;
+        .wrap-list-steps {
+            background: url("../images/content/icon_triagle.png") 497px 130px no-repeat;
+            padding-bottom: 5px;
         }
-            .list-steps:before,
-            .list-steps:after {
-                content: '';
-                display: block;
-                position: absolute;
-                bottom: 0;
-                height: 15px;
-                width: 1px;
-                background:  #D6D6D6;
+            .list-steps {
+                position: relative;
+                padding-bottom: 40px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #D6D6D6;
             }
-            .list-steps:before {
-                left: 0;
-            }
-            .list-steps:after {
-                right: 0;
-            }
-            .list-steps li {
-                display: table-cell;
-                width: 330px;
-                vertical-align: middle;
-            }
-                .list-steps .circle {
-                    float: left;
-                    width: 90px;
-                    height: 80px;
-                    padding-top: 10px;
-                    margin-right: 15px;
-                    vertical-align: middle;
-                    text-align: center;
-                    background: #FFDD2D;
-                    font: 60px "pfhighWaySansPro-thin";
-
-                    -webkit-border-radius: 45px;
-                    -moz-border-radius: 45px;
-                    border-radius: 45px;
+                .list-steps:before,
+                .list-steps:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    height: 15px;
+                    width: 1px;
+                    background:  #D6D6D6;
                 }
-                .list-steps .wrap-text {
+                .list-steps:before {
+                    left: 0;
+                }
+                .list-steps:after {
+                    right: 0;
+                }
+                .list-steps li {
                     display: table-cell;
-                    width: 225px;
-                    height: 90px;
+                    width: 330px;
                     vertical-align: middle;
-                    color: #757575;
-                    font-size: 20px;
-                    font-family: "pfagoraSansPro-thin";
                 }
+                    .list-steps .circle {
+                        float: left;
+                        width: 90px;
+                        height: 80px;
+                        padding-top: 10px;
+                        margin-right: 15px;
+                        vertical-align: middle;
+                        text-align: center;
+                        background: #FFDD2D;
+                        font: 60px "pfhighWaySansPro-thin";
+
+                        -webkit-border-radius: 45px;
+                        -moz-border-radius: 45px;
+                        border-radius: 45px;
+                    }
+                    .list-steps .wrap-text {
+                        display: table-cell;
+                        width: 225px;
+                        height: 90px;
+                        vertical-align: middle;
+                        color: #757575;
+                        font-size: 20px;
+                        font-family: "pfagoraSansPro-thin";
+                    }
         .box-steps .text-big {
             display: block;
             text-align: center;

@@ -255,4 +255,31 @@ $(document).ready(function(){
     polzunok(firstPolzunok);
     polzunok(secondPolzunok);
     polzunok(thirdPolzunok);
+
+    $('.first-numbers-js').on('keyup', function(){
+        if($(this).val().length > 2) {
+            $('.second-numbers-js').focus();
+        }
+    });
+    $('.second-numbers-js').on('keyup', function(){
+        if($(this).val().length > 2) {
+            $('.third-numbers-js').focus();
+        }
+        if($(this).val().length == 0) {
+            $('.first-numbers-js').focus();
+        }
+    });
+    $('.third-numbers-js').on('keyup', function(){
+        if($(this).val().length > 1) {
+            $('.fourth-numbers-js').focus();
+        }
+        if($(this).val().length == 0) {
+            $('.second-numbers-js').focus();
+        }
+    });
+    $('.fourth-numbers-js').on('keyup', function(){
+        if($(this).val().length == 0) {
+            $('.third-numbers-js').focus();
+        }
+    });
 });
